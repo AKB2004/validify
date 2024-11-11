@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generating Certificate</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            font-family: 'Times New Roman', Times, serif;
+        }
+        .container {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+        }
+        .certificate {
+            width: 1100px;
+            height: auto; /* Adjusted to maintain aspect ratio */
+        }
+        .name-form, .course-form, .submit-button {
+            position: absolute;
+        }
+        .name-form {
+            position: absolute;
+            top: 322px; 
+            left: 700px; 
+            transform: translateX(-50%);
+        }
+        .course-form {
+            position: absolute;
+            top: 472px; 
+            left: 700px; 
+            
+            transform: translateX(-50%);
+        }
+        
+        input {
+            background: #00256e;
+            color: white;
+            border: none;
+            height: 35px;
+            font-size: 30px;
+            text-align: center;
+            margin-bottom: 10px;
+            width: 800px; /* Adjusted width for better UI */
+        }
+        ::placeholder {
+            color: white;
+            font-size: 30px;
+            text-align: center;
+        }
+        .submit-button {
+            top: 770px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #00256e;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 20px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <img src="images/Untitled.png" alt="" class="certificate">
+        <div class="name-form">
+            <form action="">
+                <input type="text" name="name" placeholder="Your Name">
+            </form>
+        </div>
+        <div class="course-form">
+            <form action="">
+                <input type="text" name="course" placeholder="Course Name">
+            </form>
+        </div>
+        <button class="submit-button" id="downloadCertificate">Download Certificate</button>
+    </div>
+    <script src="javascript/generate.js"></script>
+</body>
+</html>
